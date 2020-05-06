@@ -10,11 +10,11 @@ public class sqlconnection
 	
 	static Connection con = null;
 	static String databaseName = "";
-	static String url = "jdbc:mysql://127.0.0.1:3306/";
+	static String url = "<url name>";
 	
-	static String username = "root";
+	static String username = "<root name>";
 	
-	static String password = "2eG8y35gk";
+	static String password = "<password>";
 
 
 
@@ -26,7 +26,7 @@ public class sqlconnection
 			
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			con = DriverManager.getConnection(url ,username, password);
-			PreparedStatement ps = con.prepareStatement("INSERT INTO 'accountinfo'.'info' ('accountID') VALUES ('e14gKvsWMl86k4fa'), ('xD1fKmvSa79Kalsf'), ('aCkf17nJk7aAe4k9');");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO 'accountinfo'.'info' ('accountID') VALUES ('<id number>'), ('<id number>'), ('<id number>');");
 			
 			
 			int status = ps.executeUpdate();
